@@ -1,0 +1,260 @@
+:root {
+    --primary-color: #4084b4;
+    --dark-color: #171d24;
+    --nav-link: #224761;
+}
+
+.custom-font-family {
+    font-family: "Montserrat";
+    font-weight: bolder;
+}
+
+.custom-bg-sidebar {
+    background-color: #171d24;
+    /* background: transparent; */
+}
+
+.custom-color {
+    color: #4084b4;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #4084b4;
+}
+
+.width-30 {
+    width: 20vw;
+    z-index: 0;
+}
+
+.welcome {
+    font-size: larger;
+}
+
+.shiny-box {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background-color: #ffffff;
+    /* Box background color */
+    border-radius: 10px;
+    width: 50%;
+    align-content: center;
+    z-index: 1;
+    overflow: hidden;
+    /* To ensure the shine effect stays within the box */
+}
+
+.shiny-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            rgba(255, 0, 0, 0.4),
+            rgba(255, 255, 0, 0.4),
+            rgba(0, 255, 0, 0.4),
+            rgba(0, 255, 255, 0.4),
+            rgba(0, 0, 255, 0.4),
+            rgba(255, 0, 255, 0.4),
+            rgba(255, 0, 0, 0.4));
+    background-size: 300%;
+    z-index: -1;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.shiny-border-box {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background-color: #fff;
+    /* Box background color */
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    /* To ensure the shine effect stays within the box */
+}
+
+.shiny-border-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    /* Adjust based on border width */
+    left: -2px;
+    /* Adjust based on border width */
+    right: -2px;
+    /* Adjust based on border width */
+    bottom: -2px;
+    /* Adjust based on border width */
+    background: linear-gradient(45deg,
+            rgba(255, 0, 0, 0.4),
+            rgba(255, 255, 0, 0.4),
+            rgba(0, 255, 0, 0.4),
+            rgba(0, 255, 255, 0.4),
+            rgba(0, 0, 255, 0.289),
+            rgba(255, 0, 255, 0.123),
+            rgba(255, 0, 0, 0.4));
+    background-size: 300%;
+    z-index: -1;
+    animation: shine 3s both infinite;
+    border-radius: 10px;
+    /* Match the border radius of the box */
+    border: 4px solid transparent;
+    /* Adjust based on desired border width */
+    pointer-events: none;
+    /* Ensure the border doesn't interfere with content */
+}
+
+/* @keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+.custom-bg-admin {
+    /* background-image: url("https://images.pexels.com/photos/355872/pexels-photo-355872.jpeg"); */
+    background-image: url("https://images.pexels.com/photos/3544567/pexels-photo-3544567.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 80vh;
+}
+
+.card-width {
+    max-width: 18rem;
+}
+
+.custom-height {
+    min-height: 20rem;
+}
+
+.card-manual-width {
+    max-width: 25rem;
+}
+
+.user-table {
+    overflow-x: scroll;
+}
+
+.user-table {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+}
+
+.user-table::-webkit-scrollbar {
+    width: 8px;
+}
+
+.user-table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.user-table::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for the scrollbar thumb */
+    border: 2px solid #f1f1f1;
+    /* Optional: adds space around thumb */
+}
+
+.payment-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 400px;
+    max-width: 90%;
+}
+
+.payment-modal h2 {
+    margin-bottom: 20px;
+}
+
+.payment-modal .form-group {
+    margin-bottom: 15px;
+}
+
+.payment-modal .btn {
+    margin-right: 10px;
+}
+
+.payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.min-height-small {
+    min-height: 8rem;
+}
+
+@media (max-width: 600px) {
+    .overview {
+        flex-wrap: wrap;
+        width: 70%;
+    }
+}
+
+.table-bordered {
+    border-color: black;
+}
+
+@media (max-width: 768px) {
+    .customer-service {
+        flex-wrap: wrap;
+    } 
+
+    .mobile-w-100 {
+        width: 100%; 
+    }
+}
+
+.px-300 {
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 300px) {
+    .px-300 {
+        flex-wrap: wrap;
+    }
+}
+
+.dropdown-custom{
+    border: none;
+    background-color: #171d24;
+}
+
+.dropdown-custom:hover {
+    color: white;
+}
