@@ -1,75 +1,90 @@
 # Final Year Project
 
-This repository contains a **Full-Stack Web Application** built with:
+This repository contains a Full-Stack Web Application built with:
 
-- **Frontend:** React (Vite)
-- **Backend:** Node.js + Express
+- Frontend: React (Vite)
+- Backend: Node.js and Express
 
 Both parts work together to provide a complete system.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
-frontend/ → React client (UI)
-backend/ → Node.js server (API & Authentication)
+Frontend and backend are separated into two folders:
 
-yaml
-Copy code
+frontend/ - React client (User Interface)
+backend/ - Node.js server (API & Authentication)
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### ✅ Prerequisites
+### Prerequisites
+
 Install the following before running the project:
 
-- **Node.js (LTS recommended)**
-- **npm** (comes with Node)
+- Node.js (LTS recommended)
+- npm (comes with Node.js)
 
 ---
 
-### ▶️ Run Backend
+### Running the Backend
 
-```bash
 cd backend
 npm install
-npm start       # or: npm run dev
-Backend will start on:
-http://localhost:4000 (or your configured port)
+npm start # or: npm run dev
 
-💻 Run Frontend
-bash
-Copy code
+
+Backend will by default run on:
+
+http://localhost:4000
+
+---
+
+### Running the Frontend
+
 cd frontend
 npm install
 npm run dev
-Frontend will start on:
-http://localhost:5173 (default Vite port)
 
-🔐 Environment Variables
-Create .env files locally (do NOT upload real secrets).
 
-backend/.env.example
-ini
-Copy code
+Frontend will run on:
+
+http://localhost:5173
+
+---
+
+## Environment Variables
+
+Create `.env` files locally (do not upload real secrets to GitHub).
+
+### backend/.env.example
+
 PORT=4000
 MONGO_URI=your_mongo_uri
 JWT_SECRET=your_secret
-frontend/.env.example
-ini
-Copy code
+
+
+### frontend/.env.example
+
 VITE_API_URL=http://localhost:4000
-📦 Scripts Quick Reference
-Location	Command	Description
-Backend	npm start	Start backend server
-Backend	npm run dev	Run backend in dev mode
-Frontend	npm run dev	Run React development server
-Frontend	npm run build	Build for production
 
-🧠 Notes
-node_modules is ignored via .gitignore
+---
 
-Never commit real .env files to GitHub
+## Scripts Reference
 
-For deployment, set environment variables on the server
+| Location  | Command         | Description                   |
+|-----------|-----------------|-------------------------------|
+| Backend   | npm start       | Start backend server          |
+| Backend   | npm run dev     | Run backend in development    |
+| Frontend  | npm run dev     | Run React development server  |
+| Frontend  | npm run build   | Build for production          |
+
+---
+
+## Notes
+
+- `node_modules` is ignored via `.gitignore`
+- Never commit real `.env` files to GitHub
+- Environment variables must be set on the server when deploying
